@@ -17,6 +17,7 @@ class CreateQuestionsTable extends Migration
             $table->id();
             $table->string('name');
             $table->tinyInteger('order');
+            $table->string('category');
             $table->timestamps();
         });
     }

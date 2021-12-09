@@ -15,6 +15,7 @@ class QuestionFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
+            'category' => $this->faker->name,
             'order' => $this->faker->randomNumber(1),
         ];
     }
