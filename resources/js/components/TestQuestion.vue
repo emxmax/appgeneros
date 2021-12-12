@@ -1,8 +1,8 @@
 <template>
   <div class="row">
-    <div class="card col-12" v-for="question in questions" :key="question.id">
+    <div class="card col-6" v-for="(question, index) in questions" :key="question.id">
       <div class="card-body">
-        <h5 class="card-title">{{ question.name }}</h5>
+        <h5 class="card-title">{{index+1}}- {{ question.name }}</h5>
         <div class="form-group">
           <test-question-answer :question="question" :answers="question.answers"></test-question-answer>
         </div>
@@ -10,7 +10,7 @@
     </div>
     <div class="col-12 text-center my-5">
       <button class="btn btn-primary" @click.prevent="handleSaveAnswers">
-        Enviar
+        ENVIAR
       </button>
     </div>
   </div>
@@ -46,7 +46,8 @@ export default {
         answers: this.answers_selected,
         generos: (Object.values(this.generos)).toString()
       }).then(res => {
-        alert('Se registro correctamente')
+        alert('Sus respuestas han sido registradas con éxito de forma anónima y segura. Te agradecemos por haber participado en esta encuesta que ayudará en la presente investigación con fines académico. Muchas gracias');
+        window.location.replace("/");
       })
 
     }

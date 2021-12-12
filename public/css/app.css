@@ -10019,3 +10019,28 @@ h3 {
     border-color: #dee2e6;
   }
 }
+#generos{
+  background-color: #B4BF5E;
+}
+#generos ul{
+  margin-bottom: 30px;
+}
+#generos ul li{
+  background-color: #252617;
+  color: white;
+  margin: 0px 3px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 2px 7px;
+}
+#encuesta{
+  background-color: #CAD959;
+  padding-top: 30px;
+}
+#encuesta h1{
+  margin-bottom: 30px;
+}
+#encuesta button{
+  background-color: #34401A;
+  border: 1px solid #34401A;
+}
